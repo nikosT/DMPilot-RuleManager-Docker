@@ -38,6 +38,9 @@ RUN cp lib/dataselect-3.21/dataselect ./bin/
 RUN cp lib/libmseed-2.19.6/example/msrepack ./bin/
 RUN cp lib/msi-3.8/msi ./bin/
 
+# add binaries to path
+ENV PATH="/DMPilot-RuleManager/bin:${PATH}"
+
 # copy configuration file
 COPY ./configuration.py .
 
